@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="">Home</a></li>
+            <li><a href="">Utilisateurs <span id="number_users" class="new badge">0</span></a></li>
+            <li><a href="">contacts</a></li>
+        </ul>
+    </div>
+</nav>
+<br />
+<div class="row">
+    <a class="waves-effect waves-light btn" id="ajout">Ajouter un utilisateur</a>
+</div>
+<h1>Liste des utilisateurs</h1>
+<div class="collection" id="users_list">
+</div>
+
+<h2 id="ajoutUser">Ajouter un nouveau utilisateur</h2>
+
+<div class="row">
+</div>
+
+<div id="ajoutModif" class="modal">
+    <div class="modal-content">
+        <h4>Ajouter un utilisateur</h4>
+        <form class="col s12" id="addUser">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Nom" id="nom" type="text" name="nom">
+                    <label for="nom">Nom</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="prenom" type="text" name="prenom">
+                    <label for="prenom">Prénom</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" name="email">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <button data-type="ajout" type="submit" id="submitUser" class="waves-effect waves-light btn">
+                    Ajouter
+                </button>
+
+                <button data-type="modification" type="submit" id="updateUser" class="hidden waves-effect waves-light btn">
+                    Modification
+                </button>
+                <button data-type="supprimer" type="submit" id="deleteAction" class="hidden waves-effect red btn">
+                    Supprimer
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+
+
+
+
+<script src="js/vendor/jquery-3.2.1.min.js"></script>
+<script src="js/vendor/sweetAlert.js"></script>
+<script src="js/vendor/materialize.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
